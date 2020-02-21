@@ -84,6 +84,15 @@ ul li {
 	margin-left: 5px;
 }
 
+.dark {
+	color: #fff;
+}
+
+.dark .btn {
+	color: #262626;
+	background: #ffffff;
+}
+
 /* Show Case */
 .showcase {
 	width: 100%;
@@ -116,7 +125,7 @@ ul li {
 .home-cards {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 20px;
+	gap: 20px;
 	margin-bottom: 40px;
 }
 
@@ -148,7 +157,7 @@ ul li {
 .xbox {
 	height: 400px;
 	width: 100%;
-	background: url('/assets/images/xbox.png') no-repeat center center/cover;
+	background: url('/assets/images/xbox-high-def.png') no-repeat center center/cover;
 	margin-bottom: 20px;
 }
 
@@ -157,7 +166,8 @@ ul li {
 	padding: 90px 0 0 60px;
 }
 
-.xbox p {
+.xbox p,
+.awareness p {
 	margin: 10px 0 30px;
 }
 
@@ -180,39 +190,113 @@ ul li {
 	width: 100%;
 }
 
+.work .btn {
+	background: #fff;
+}
+
 .work .btn a {
-	color: #fff;
+	color: #0067b8;
 	text-transform: uppercase;
+}
+
+.work .btn i {
+	color: #0067b8;
+}
+
+.work .btn:hover span {
+	border-bottom: 2px solid #0067b8;
+	opacity: 0.9;
 }
 
 .awareness {
 	height: 400px;
 	width: 100%;
-	background: url('/assets/images/awareness.jpg') no-repeat center center/cover;
-	margin-bottom: 60px;
+	background: url('/assets/images/awareness.png') no-repeat center center/cover;
+	margin-bottom: 20px;
 }
 
 .awareness .content {
 	width: 40%;
-	padding: 50px 0 0 60px;
-}
-
-.awareness h2,
-.awareness p {
-	margin-bottom: 5px;
-	color: #fff;
-}
-
-.awareness .btn {
-	margin-top: 20px;
-	background: #fff;
-}
-
-.awareness .btn a span,
-.awareness .btn i {
-	color: #262626;
+	padding: 100px 0 0 60px;
 }
 
 .awareness .btn a:hover span {
 	border-bottom: 2px solid #262626;
+}
+
+/* Social Media*/
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 30px 0 30px;
+}
+
+.social * {
+	margin-right: 10px;
+}
+
+/* Links */
+
+.links,
+.footer {
+	background: #d6e8f3;
+	color: #616161;
+	font-size: 12px;
+	padding: 35px 0;
+}
+
+.links-inner {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 10px;
+}
+
+.links li {
+	line-height: 2.8;
+}
+
+.links ul li a {
+	opacity: 0.9;
+}
+
+.links ul li:hover a {
+	border-bottom: 1px solid #333;
+	opacity: 1;
+	font-weight: bold;
+}
+
+/* Footer */
+.footer-inner {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer div {
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.footer div i {
+	margin-right: 10px;
+}
+
+.footer ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer li {
+	margin-right: 30px;
+	margin-bottom: 20px;
 }
