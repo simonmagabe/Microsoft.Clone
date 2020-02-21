@@ -63,6 +63,15 @@ ul li {
 }
 
 /* Utility Classes */
+.menu-btn {
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	z-index: 2;
+	display: none;
+}
+
 .btn {
 	cursor: pointer;
 	display: inline-block;
@@ -97,7 +106,7 @@ ul li {
 .showcase {
 	width: 100%;
 	height: 400px;
-	background: url(/assets/images/slide1.png) no-repeat center center/cover;
+	background: url('/assets/images/slide1.png') no-repeat center center/cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -125,7 +134,7 @@ ul li {
 .home-cards {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
+	gap: 10px;
 	margin-bottom: 40px;
 }
 
@@ -157,7 +166,7 @@ ul li {
 .xbox {
 	height: 400px;
 	width: 100%;
-	background: url('/assets/images/xbox-high-def.png') no-repeat center center/cover;
+	background: url('/assets/images/xbox.png') no-repeat center center/cover;
 	margin-bottom: 20px;
 }
 
@@ -299,4 +308,197 @@ ul li {
 .footer li {
 	margin-right: 30px;
 	margin-bottom: 20px;
+}
+
+.footer li:hover a {
+	border-bottom: 1px solid #262626;
+}
+
+/* Media Query */
+@media (max-width: 1050px) {
+	.main-nav .menu-right li span {
+		display: none;
+	}
+
+	.home-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.work .content {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.links .links-inner {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 800px) {
+	.menu-btn {
+		display: block;
+	}
+
+	.menu-btn:hover {
+		opacity: 0.5;
+	}
+
+	.main-nav ul.menu-right {
+		margin-right: 50px;
+	}
+
+	.main-nav ul.main-menu {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #f2f2f2;
+		width: 50%;
+		height: 100%;
+		border-right: #ccc 1px solid;
+		opacity: 0.9;
+		padding: 30px;
+		transform: translateX(-500px);
+		transition: transform 1s ease-in-out;
+	}
+
+	.main-nav ul.main-menu li {
+		padding: 10px;
+		border-bottom: 1px solid #ccc;
+		font-size: 14px;
+	}
+
+	.main-nav ul.main-menu li:last-child {
+		border-bottom: none;
+	}
+
+	.main-nav ul.main-menu.show {
+		transform: translateX(-20px);
+	}
+
+	.showcase {
+		height: 350px;
+		background: url('/assets/images/slide1-medium.jpg') no-repeat center center/cover;
+	}
+
+	.main-nav .menu-right a span {
+		display: none;
+	}
+
+	.main-nav .menu-right li:hover a {
+		border-bottom: none;
+	}
+
+	.menu-right li a:hover i {
+		border: 1px solid #616161;
+		border-radius: 2px;
+		padding: 3px;
+	}
+
+	.home-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.xbox {
+		height: 350px;
+		background: url('/assets/images/xbox.png') no-repeat center center/cover;
+	}
+
+	.xbox .content p {
+		display: none;
+	}
+
+	.xbox .content h2 {
+		margin-bottom: 20px;
+		font-size: 22px;
+	}
+
+	.work .content {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+
+	.awareness .content {
+		width: 80%;
+		padding: 50px 0 0 70px;
+	}
+
+	.links .links-inner {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 500px) {
+	.main-nav .menu-right li:nth-child(1) {
+		display: none;
+	}
+
+	.showcase {
+		height: 200px;
+		background: url('/assets/images/slide1-small.jpg') no-repeat center center/cover;
+	}
+
+	.showcase h2 {
+		font-size: 18px;
+		margin-bottom: -16px;
+	}
+
+	.showcase p {
+		display: none;
+	}
+
+	.showcase .btn {
+		margin-bottom: -40px;
+	}
+
+	.home-cards {
+		grid-template-columns: 1fr;
+	}
+
+	.xbox {
+		height: 200px;
+		background: url('/assets/images/xbox-small.png') no-repeat center center/cover;
+	}
+
+	.xbox .content {
+		display: none;
+	}
+
+	.awareness {
+		height: 200px;
+		background: url('/assets/images/awareness.png') no-repeat center center/cover;
+	}
+
+	.work .content {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.awareness .content {
+		width: 100%;
+		padding: 10px 0 0 10px;
+		font-size: 12px;
+	}
+
+	.awareness .content h2 {
+		margin-bottom: 10px;
+	}
+
+	.awareness .content p {
+		display: none;
+	}
+
+	.links .links-inner {
+		grid-template-columns: 1fr;
+	}
+
+	.footer .footer-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	.footer .footer-inner ul {
+		flex-direction: column;
+	}
 }
